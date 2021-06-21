@@ -1,0 +1,83 @@
+sys/ /os:MOS
+
+// Charger le profil graphique PAR DEFAUT (Obligatoire)
+exe/ & OS/MOS/CONFIG/ENV_GUI/env_gui.cpc
+
+// Background image
+fix/ SCR_IMG = OS/MEDIA/abs_blue.jpg
+
+// Et APRES vous pouvez charger le votre
+
+set/ SCR_RES = 1024x768
+set/ SCR_BIT = 24
+
+ccp/ /fix.niveau = 4
+
+
+// **************************************************
+// ** [EN] Operating system informations           **
+// ** [FR] Informations du systeme d'exploitation  **
+// **************************************************
+
+FIX/ OS_NAME = MaverickOS NG
+FIX/ OS_Author = Yuu Software Inc.
+FIX/ OS_Compagny = Yuu Software Inc.
+FIX/ OS_Created = 20-06-2021
+FIX/ OS_Updated = 20-06-2021
+
+
+// ***************************************************
+// ** [EN] Operating system configuration           **
+// ** [FR] Configuration du systeme d'exploitation  **
+// ***************************************************
+
+FIX/ HOST_OS = OS/MOS
+FIX/ GUI_OS = %HOST_OS%/MEDIA/GUI
+
+
+// ******************************************************
+// ** [EN] Starting Graphic User Interface             **
+// ** [FR] Demarrer l'interface utilisateur graphique  **
+// ******************************************************
+GUI/
+
+// Load icon on GUI
+sys/ /fileformat-gui-load
+
+// ----------------------------------------------------------- //
+//                  ------ C O D E ------                      //
+// ----------------------------------------------------------- //
+
+// Creer un nouveau processus nomme '_MENUS_'
+@#PID_Menu_Accueil SYS/ /processus _MENUS_
+
+// Creer un 2eme nouveau processus nomme '_APP_'
+@#PID_APP SYS/ /processus _APP_
+
+// Creer un bureau de fond avec les icones
+set/ pos_x = 0
+set/ pos_y = 30
+set/ size_x = %CPC.SCR.X%
+set/ size_y = %CPC.SCR.Y%
+
+// Execute desktop function
+set/ handle_desktop = /F:Init_Desktop(MyDesktop, ./, %pos_x%, %pos_y%, %size_X%, %size_Y%)
+
+// Executer barre.CPC dans le processus "_MENUS_" via son PID
+// CMD/ /PID:%PID_Menu_Accueil% exe/ & %HOST_OS%/barre.cpc
+
+// Executer app.cpc dans le processus "_APP_" via son PID
+// CMD/ /PID:%PID_APP% exe/ & %HOST_OS%/app.cpc
+
+// exe/ & test.cpc
+// exe/ & tests/tchat.cpc
+// exe/ & tests/explorer.cpc
+
+exe/ & %HOST_OS%/DOCK.CPC
+
+refresh/ /all
+
+
+
+
+

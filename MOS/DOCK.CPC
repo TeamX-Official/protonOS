@@ -1,0 +1,21 @@
+set/ sx_dock = /C(%CPC.SCR.X% - 100)
+
+window/ DOCK
+    .title = "Dock"
+    .px = "0"
+    .py = "0"
+    .sx = "%sx_dock%"
+    .sy = "50"
+    .Opacity = "75"
+    .parameters = "TYPE:5 CTN:1 BORD:0 MOVE:0 SIZE:0 SHADOW:10 TASKBARHIDE:1 CLOSE:0 REDUCT:0 SIZEBTN:0"
+    .WindowColor= "255,255,255"
+    .TitleColor= "255,255,255"
+    .BackColor= "255,255,255"
+    .event = ""
+    @#handle_dock create/
+end/ window
+
+
+
+
+
