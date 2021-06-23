@@ -20,9 +20,20 @@ picturebox/ DOCK_IMG_L
     .parameters = "IMGAUTO:0"
     .px = "0"
     .py = "0"
-    .sx = "15"
+    .sx = "25"
     .sy = "50"
-    .image = ""
+    .image = "%HOST_OS%/MEDIA/GUI/BAR_IMG_L.png"
+    create/
+end/ picturebox
+
+picturebox/ DOCK_IMG
+    .handle = "%handle_dock%"
+    .parameters = "IMGAUTO:2"
+    .px = "25"
+    .py = "0"
+    .sx = "25"
+    .sy = "50"
+    .image = "%HOST_OS%/MEDIA/GUI/BAR_IMG.png"
     create/
 end/ picturebox
 
