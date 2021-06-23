@@ -31,7 +31,7 @@ picturebox/ DOCK_IMG
     .parameters = "IMGAUTO:2"
     .px = "25"
     .py = "0"
-    .sx = "25"
+    .sx = "%sx_dock%"
     .sy = "50"
     .image = "%HOST_OS%/MEDIA/GUI/BAR_IMG.png"
     create/
