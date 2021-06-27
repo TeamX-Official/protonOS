@@ -1,12 +1,13 @@
-set/ sx_dock = /C(%CPC.SCR.X% - 100)
+set/ px_dock = 232
+set/ py_dock = /C(%CPC.SCR.Y% - 84)
 
 window/ DOCK
     .title = "DOCK"
-    .px = "0"
-    .py = "0"
-    .sx = "%sx_dock%"
-    .sy = "50"
-    .Opacity = "75"
+    .px = "%px_dock%"
+    .py = "%py_dock%"
+    .sx = "820"
+    .sy = "63"
+    .Opacity = "100"
     .parameters = "TYPE:5 CTN:1 BORD:0 MOVE:0 SIZE:0 SHADOW:10 TASKBARHIDE:1 CLOSE:0 REDUCT:0 SIZEBTN:0"
     .windowcolor = "255,255,255"
     .titlecolor = "255,255,255"
@@ -17,14 +18,26 @@ end/ window
 
 picturebox/ DOCK_IMG
     .handle = "%handle_dock%"
-    .parameters = "IMGAUTO:2"
-    .px = "25"
+    .parameters = "IMGAUTO:1"
+    .px = "0"
     .py = "0"
-    .sx = "%sx_dock%"
-    .sy = "50"
+    .sx = "820"
+    .sy = "63"
     .image = "%HOST_OS%/MEDIA/GUI/BAR_IMG.png"
     create/
 end/ picturebox
+
+picturebox/ MENU_BUTTON
+    .handle = "%handle_dock%"
+    .parameters = "IMGAUTO:1"
+    .px = "8"
+    .py = "5"
+    .sx = "136"
+    .sy = "53"
+    .image = "%HOST_OS%/MEDIA/GUI/BUTTONS/MENU_BUTTON.png"
+    create/
+end/ picturebox
+
 
 
 
