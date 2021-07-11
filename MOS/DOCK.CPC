@@ -30,7 +30,7 @@ end/ picturebox
 picturebox/ MENU_BUTTON
     .handle = "%handle_dock%"
     .parameters = "IMGAUTO:1"
-    .px = "8"
+    .px = "6"
     .py = "5"
     .sx = "136"
     .sy = "53"

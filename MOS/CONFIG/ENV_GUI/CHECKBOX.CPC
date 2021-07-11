@@ -11,20 +11,20 @@ SET/ CPC_GUI.CHECKBOX.SY = 14
 
 // [FR] Si la case est cochee
 // [EN] If the case is checked
-SET/ CPC_GUI.CHECKBOX.IMG_CHECKED = %OS_GUI%\CHECKBOX\CHECK.PNG
+SET/ CPC_GUI.CHECKBOX.IMG_CHECKED = %GUI_OS%\CHECKBOX\CHECK.PNG
 
 // [FR] Si la case est cochee ET survolee par la souris
 // [EN] If the case is checked AND overflown by mouse
-SET/ CPC_GUI.CHECKBOX.IMG_SURVOLE_CHECKED = %OS_GUI%\CHECKBOX\SCHECK.PNG
+SET/ CPC_GUI.CHECKBOX.IMG_SURVOLE_CHECKED = %GUI_OS%\CHECKBOX\SCHECK.PNG
 
 // [FR] Si la case n'est pas cochee
 // [EN] If the case is not checked
-SET/ CPC_GUI.CHECKBOX.IMG_NOCHECKED = %OS_GUI%\CHECKBOX\NCHECK.PNG
+SET/ CPC_GUI.CHECKBOX.IMG_NOCHECKED = %GUI_OS%\CHECKBOX\NCHECK.PNG
 
 
 // [FR] Si la case n'est pas cochee ET survolee par la souris
 // [EN] If the case is checked AND overflown by mouse
-SET/ CPC_GUI.CHECKBOX.IMG_SURVOLE_NOCHECKED = %OS_GUI%\CHECKBOX\SNCHECK.PNG
+SET/ CPC_GUI.CHECKBOX.IMG_SURVOLE_NOCHECKED = %GUI_OS%\CHECKBOX\SNCHECK.PNG
 
 
 

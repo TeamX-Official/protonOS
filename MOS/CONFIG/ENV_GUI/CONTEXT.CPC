@@ -3,7 +3,7 @@ CCP/ /SET.LEVEL = 3
 
 // ---- CONTEXT ----
 
-SET/ CPC_GUI.CONTEXT.BACKGROUND = %OS_GUI%/Context.png
+SET/ CPC_GUI.CONTEXT.BACKGROUND = %GUI_OS%/Context.png
 
 
 
