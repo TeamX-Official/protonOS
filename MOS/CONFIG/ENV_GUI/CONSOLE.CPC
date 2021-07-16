@@ -4,7 +4,7 @@
 // Free code!
 
 window/ Console_text
-        .title          = "CpcdosC+ Shell"
+        .title          = "Shell"
         .px             = "200"
         .py             = "130"
         .sx             = "600"
