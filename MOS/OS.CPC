@@ -8,7 +8,7 @@ fix/ SCR_IMG = OS/MEDIA/abs_blue.jpg
 
 // Et APRES vous pouvez charger le votre
 
-set/ SCR_RES = 1280x1024
+set/ SCR_RES = 1920x1080
 set/ SCR_BIT = 24
 
 ccp/ /fix.niveau = 4

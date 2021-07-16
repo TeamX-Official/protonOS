@@ -1,5 +1,5 @@
-set/ px_dock = 232
-set/ py_dock = /C(%CPC.SCR.Y% - 84)
+set/ px_dock = 550
+set/ py_dock = 986
 
 window/ DOCK
     .title = "DOCK"
@@ -35,6 +35,7 @@ picturebox/ MENU_BUTTON
     .sx = "136"
     .sy = "53"
     .image = "%HOST_OS%/MEDIA/GUI/BUTTONS/MENU_BUTTON.png"
+    .event = "DKEVNT.CPC"
     create/
 end/ picturebox
 

@@ -1,0 +1,3 @@
+function/ MENU_BUTTON.MouseClick()
+    msgbox/ MenuTest /title:MOSNGTEST
+end/ function
