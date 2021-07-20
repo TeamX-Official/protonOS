@@ -1,3 +1,4 @@
-function/ MENU_BUTTON.MouseClick()
+function/ MENU_BUTTON.Click()
     msgbox/ MenuTest /title:MOSNGTEST
+    msgbox/ Should work now
 end/ function
