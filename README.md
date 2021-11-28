@@ -5,3 +5,6 @@
  Because it isn't our first try.
  We already did 3 OS before (InfinityOS, LataOSX and MaverickOS Old Version).
  This OS is developed for simplicity, modernity and functionalities.
+
+# What does NG mean?
+It means New Generation.
