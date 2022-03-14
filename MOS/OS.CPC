@@ -1,3 +1,8 @@
+//Declare/ bootSequence() : level(4)
+
+ccp/ /lang = EN
+sys/ /DEBUG /menu = 0
+
 sys/ /os:MOS
 
 // Charger le profil graphique PAR DEFAUT (Obligatoire)
@@ -11,7 +16,7 @@ fix/ SCR_IMG = OS/MEDIA/abs_blue.jpg
 set/ SCR_RES = 1920x1080
 set/ SCR_BIT = 24
 
-ccp/ /fix.niveau = 4
+ccp/ /set.level = 4
 
 
 // **************************************************
@@ -19,11 +24,11 @@ ccp/ /fix.niveau = 4
 // ** [FR] Informations du systeme d'exploitation  **
 // **************************************************
 
-FIX/ OS_NAME = MaverickOS NG
-FIX/ OS_Author = Yuu Software Inc.
-FIX/ OS_Compagny = Yuu Software Inc.
+FIX/ OS_NAME = protonOS
+FIX/ OS_Author = TeamX
+FIX/ OS_Compagny = TeamX
 FIX/ OS_Created = 20-06-2021
-FIX/ OS_Updated = 20-06-2021
+FIX/ OS_Updated = 14-03-2022
 
 
 // ***************************************************
