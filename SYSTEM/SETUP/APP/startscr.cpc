@@ -21,6 +21,6 @@ window/ welcomeSetup
     .BackColor = "198,198,198"
     .TitleColor = "255,255,255"
     .ImgTitre = ""
-    // .Icon = "OS/HEXAC/SYSTEM/SETUP/APP/GRAPH/icon.png"
+    // .Icon = "%HOST_OS%/icon.png"
     @#welcomeSetup_ref create/
 end/ window

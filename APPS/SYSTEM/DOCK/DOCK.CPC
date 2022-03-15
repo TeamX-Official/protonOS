@@ -1,12 +1,12 @@
-set/ px_dock = 550
-set/ py_dock = 986
+set/ px_dock = 78
+set/ py_dock = 928
 
 window/ DOCK
     .title = "DOCK"
     .px = "%px_dock%"
     .py = "%py_dock%"
-    .sx = "820"
-    .sy = "63"
+    .sx = "1764"
+    .sy = "107"
     .Opacity = "100"
     .parameters = "TYPE:5 CTN:1 BORD:0 MOVE:0 SIZE:0 SHADOW:10 TASKBARHIDE:1 CLOSE:0 REDUCT:0 SIZEBTN:0"
     .windowcolor = "255,255,255"
@@ -21,20 +21,20 @@ picturebox/ DOCK_IMG
     .parameters = "IMGAUTO:1"
     .px = "0"
     .py = "0"
-    .sx = "820"
-    .sy = "63"
-    .image = "%HOST_OS%/MEDIA/GUI/BAR_IMG.png"
+    .sx = "1764"
+    .sy = "107"
+    .image = "%HOST_OS%/APPS/SYSTEM/DOCK/MEDIA/Appbar.png"
     create/
 end/ picturebox
 
 picturebox/ MENU_BUTTON
     .handle = "%handle_dock%"
     .parameters = "IMGAUTO:1"
-    .px = "6"
-    .py = "5"
-    .sx = "136"
-    .sy = "53"
-    .image = "%HOST_OS%/MEDIA/GUI/BUTTONS/MENU_BUTTON.png"
+    .px = "39"
+    .py = "24"
+    .sx = "54"
+    .sy = "60"
+    .image = "%HOST_OS%/APPS/SYSTEM/DOCK/MEDIA/Button.png"
     .event = "DKEVNT.CPC"
     create/
 end/ picturebox
