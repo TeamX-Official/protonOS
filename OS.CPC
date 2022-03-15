@@ -2,7 +2,7 @@
 declare/ bootSequence() : level(4)
 
 ccp/ /lang = EN
-sys/ /DEBUG /menu = 0
+// sys/ /DEBUG /menu = 0
 ccp/ /set.level = 4
 
 
@@ -45,6 +45,9 @@ set/ SCR_BIT = 24
 
 sys/ /os:PROTON
 
+sys/ /fileformat-update %HOST_OS%/SYSTEM/CONFIG/FORMATS.INI
+sys/ /fileformat-gui-update
+
 cls/
 txt/ Please wait, starting protonOS %OS_Dev_State% %OS_Ver_Maj%.%OS_Ver_Min%...
 ccp/ /pause:2500
@@ -65,8 +68,7 @@ function/ bootSequence()
         // set/ SCR_IMG = %FOND%
         gui/
         // exe/ & OS/HEXAC/SYS_APPS/LOGIN/login.cpc
-        exe/ & %HOST_OS%/APPS/SYSTEM/DOCK/DOCK.CPC
-        exe/ & %HOST_OS%/SYSTEM/CONFIG/desktop.cpc
+        exe/ & %HOST_OS%/APPS/SYSTEM/APPBAR/APPBAR.CPC
     else:
         set/ SCR_RES = 1024x768
         // set/ SCR_IMG = OS/HEXAC/SYSTEM/SETUP/BACKGRD/FSTSTP.png

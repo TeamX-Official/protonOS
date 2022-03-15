@@ -8,7 +8,7 @@ window/ DOCK
     .sx = "1764"
     .sy = "107"
     .Opacity = "100"
-    .parameters = "TYPE:5 CTN:1 BORD:0 MOVE:0 SIZE:0 SHADOW:10 TASKBARHIDE:1 CLOSE:0 REDUCT:0 SIZEBTN:0"
+    .parametres = "TYPE:5 CTN:1 BORD:0 MOVE:0 SIZE:0 SHADOW:10 TASKBARHIDE:1 CLOSE:0 REDUCT:0 SIZEBTN:0"
     .windowcolor = "255,255,255"
     .titlecolor = "255,255,255"
     .backcolor = "255,255,255"
@@ -18,7 +18,7 @@ end/ window
 
 picturebox/ DOCK_IMG
     .handle = "%handle_dock%"
-    .parameters = "IMGAUTO:1"
+    .parametres = "IMGAUTO:1"
     .px = "0"
     .py = "0"
     .sx = "1764"
@@ -29,18 +29,27 @@ end/ picturebox
 
 picturebox/ MENU_BUTTON
     .handle = "%handle_dock%"
-    .parameters = "IMGAUTO:1"
+    .parametres = "IMGAUTO:1 CTX:2"
     .px = "39"
     .py = "24"
     .sx = "54"
     .sy = "60"
     .image = "%HOST_OS%/APPS/SYSTEM/DOCK/MEDIA/Button.png"
-    .event = "DKEVNT.CPC"
+    .event = "%_exe_path_%"
     create/
 end/ picturebox
 
+function/ MENU_BUTTON.MouseClick()
+	msgbox/ Should work now
+end/ function
 
 
+// Contextual menu
+ccp/ /set.level = 3
 
+set/ MENU_BUTTON.ctx_text[1] = Not yet implemented
+set/ MENU_BUTTON.ctx_action[1] = msgbox/ bruh 
+
+set/ MENU_BUTTON.ctx_number = 1
 
 

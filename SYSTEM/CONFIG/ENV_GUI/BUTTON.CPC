@@ -5,7 +5,7 @@ CCP/ /SET.LEVEL = 3
 
 // [FR] Si le bouton est survole on ajoute cette image par dessus
 // [EN] If the button is overflown we add this image
-SET/ CPC_GUI.BUTTON.SURVOLE = %GUI_OS%\BUTTONS\BTN_WT.PNG
+SET/ CPC_GUI.BUTTON.SURVOLE = %OS_GUI%\BUTTONS\BTN_WT.PNG
 
 
 
