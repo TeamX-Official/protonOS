@@ -1,2 +1,26 @@
 // Thank you Chrapati for the code
 
+// -- protonOS Setup -- Welcome Start Screen --
+
+set/ sizex = 800
+set/ sizey = 600
+
+set/ posx = /C(%CPC.SCR.X% / 2) - (%sizex% / 2)
+set/ posy = /C(%CPC.SCR.Y% / 2) - (%sizey% / 2)
+
+sys/ /debug = 0
+
+window/ welcomeSetup
+    .title = "Welcome - protonOS Setup"
+    .parametres = "TYPE:0"
+    .px = "%posx%"
+    .py = "%posy%"
+    .sx = "%sizex%"
+    .sy = "%sizey%"
+    .WindowColor = "000,019,209"
+    .BackColor = "198,198,198"
+    .TitleColor = "255,255,255"
+    .ImgTitre = ""
+    // .Icon = "OS/HEXAC/SYSTEM/SETUP/APP/GRAPH/icon.png"
+    @#welcomeSetup_ref create/
+end/ window
