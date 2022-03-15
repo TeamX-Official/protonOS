@@ -6,7 +6,7 @@ sys/ /DEBUG /menu = 0
 sys/ /os:MOS
 
 // Charger le profil graphique PAR DEFAUT (Obligatoire)
-exe/ & OS/MOS/CONFIG/ENV_GUI/env_gui.cpc
+exe/ & OS/MOS/SYSTEM/CONFIG/ENV_GUI/env_gui.cpc
 
 // Background image
 fix/ SCR_IMG = OS/MEDIA/abs_blue.jpg
