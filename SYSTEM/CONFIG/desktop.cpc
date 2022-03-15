@@ -1,0 +1,14 @@
+// ----------------------------------------------------------- //
+//                  ------ C O D E ------                      //
+// ----------------------------------------------------------- //
+
+// Create icons
+set/ pos_x = 0
+set/ pos_y = 30
+set/ size_x = %CPC.SCR.X%
+set/ size_y = %CPC.SCR.Y%
+
+// Execute desktop function
+set/ handle_desktop = /F:Init_Desktop(MyDesktop, ./, %pos_x%, %pos_y%, %size_X%, %size_Y%)
+
+refresh/ /all

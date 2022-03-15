@@ -1,21 +1,8 @@
-//Declare/ bootSequence() : level(4)
+// This file is the index file for the kernel. Don't delete or rename this or else your system won't work properly.
+declare/ bootSequence() : level(4)
 
 ccp/ /lang = EN
 sys/ /DEBUG /menu = 0
-
-sys/ /os:MOS
-
-// Charger le profil graphique PAR DEFAUT (Obligatoire)
-exe/ & OS/MOS/SYSTEM/CONFIG/ENV_GUI/env_gui.cpc
-
-// Background image
-fix/ SCR_IMG = OS/MEDIA/abs_blue.jpg
-
-// Et APRES vous pouvez charger le votre
-
-set/ SCR_RES = 1920x1080
-set/ SCR_BIT = 24
-
 ccp/ /set.level = 4
 
 
@@ -24,11 +11,17 @@ ccp/ /set.level = 4
 // ** [FR] Informations du systeme d'exploitation  **
 // **************************************************
 
-FIX/ OS_NAME = protonOS
-FIX/ OS_Author = TeamX
-FIX/ OS_Compagny = TeamX
-FIX/ OS_Created = 20-06-2021
-FIX/ OS_Updated = 14-03-2022
+set/ OS_NAME = protonOS
+set/ OS_Author = TeamX
+set/ OS_Compagny = TeamX
+
+set/ OS_Ver_Maj = 1
+set/ OS_Ver_Min = 0
+set/ OS_Dev_State = Alpha
+
+set/ OS_Created = 20-06-2021
+set/ OS_Updated = 14-03-2022
+
 
 
 // ***************************************************
@@ -36,50 +29,51 @@ FIX/ OS_Updated = 14-03-2022
 // ** [FR] Configuration du systeme d'exploitation  **
 // ***************************************************
 
-FIX/ HOST_OS = OS/MOS
+set/ HOST_OS = OS/PROTON
 
 
 // ******************************************************
 // ** [EN] Starting Graphic User Interface             **
 // ** [FR] Demarrer l'interface utilisateur graphique  **
 // ******************************************************
-GUI/
+exe/ & %HOST_OS%/SYSTEM/CONFIG/ENV_GUI/env_gui.cpc
 
-// Load icon on GUI
-sys/ /fileformat-gui-load
+// Don't replace that one
+set/ SCR_IMG = OS/MEDIA/abs_blue.jpg
+// set/ SCR_RES = 1920x1080
+set/ SCR_BIT = 24
 
-// ----------------------------------------------------------- //
-//                  ------ C O D E ------                      //
-// ----------------------------------------------------------- //
+sys/ /os:PROTON
 
-// Creer un nouveau processus nomme '_MENUS_'
-@#PID_Menu_Accueil SYS/ /processus _MENUS_
+cls/
+txt/ Please wait, starting protonOS %OS_Dev_State% %OS_Ver_Maj%.%OS_Ver_Min%...
+ccp/ /pause:2500
+/F: bootSequence()
 
-// Creer un 2eme nouveau processus nomme '_APP_'
-@#PID_APP SYS/ /processus _APP_
+// Boot Sequence (Thank you Hexac System)
 
-// Creer un bureau de fond avec les icones
-set/ pos_x = 0
-set/ pos_y = 30
-set/ size_x = %CPC.SCR.X%
-set/ size_y = %CPC.SCR.Y%
+function/ bootSequence()
+    ccp/ /set.level = 1
+    @#BOOT_GET_INFORMATION_SETUP open/ %HOST_OS%/SYSTEM/SETUP/config.cfg
 
-// Execute desktop function
-set/ handle_desktop = /F:Init_Desktop(MyDesktop, ./, %pos_x%, %pos_y%, %size_X%, %size_Y%)
-
-// Executer barre.CPC dans le processus "_MENUS_" via son PID
-// CMD/ /PID:%PID_Menu_Accueil% exe/ & %HOST_OS%/barre.cpc
-
-// Executer app.cpc dans le processus "_APP_" via son PID
-// CMD/ /PID:%PID_APP% exe/ & %HOST_OS%/app.cpc
-
-// exe/ & test.cpc
-// exe/ & tests/tchat.cpc
-// exe/ & tests/explorer.cpc
-
-exe/ & %HOST_OS%/DOCK.CPC
-
-refresh/ /all
+    // Get the content of the config.cfg file and execute when true or false.
+    if/ "%BOOT_GET_INFORMATION_SETUP%" == "true" then:
+        @#SCREEN_RESOLUTION ouvrir/ %HOST_OS%/SYSTEM/CONFIG/SCR_RES/config.cfg
+        set/ SCR_RES = %SCREEN_RESOLUTION%
+        set/ SCR_IMG_MODE = 2
+        // @#FOND ouvrir/ OS/HEXAC/SYSTEM/CONFIG/BACKGRD/config.cfg
+        // set/ SCR_IMG = %FOND%
+        gui/
+        // exe/ & OS/HEXAC/SYS_APPS/LOGIN/login.cpc
+        exe/ & %HOST_OS%/APPS/SYSTEM/DOCK/DOCK.CPC
+        exe/ & %HOST_OS%/SYSTEM/CONFIG/desktop.cpc
+    else:
+        set/ SCR_RES = 1024x768
+        // set/ SCR_IMG = OS/HEXAC/SYSTEM/SETUP/BACKGRD/FSTSTP.png
+        gui/
+        exe/ & %HOST_OS%/SYSTEM/SETUP/APP/startscr.cpc
+    end/ if
+end/ function
 
 
 
