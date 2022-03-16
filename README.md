@@ -2,7 +2,7 @@
  protonOS is a next generation operating system which simplifies tasks such as starting a program, see your files and do simple tasks such as taking notes.
 
 # How to install?
-To install protonOS, you have to download and install the micro-kernel **Cpcdos** or **protonNT** (based on Cpcdos, recommended for protonOS).
+To install protonOS, you have to download and install the co-kernel **Cpcdos** or **protonNT** (based on Cpcdos, recommended for protonOS).
 
 
 
