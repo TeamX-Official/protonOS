@@ -1,40 +1,41 @@
-set/ px_dock = 78
-set/ py_dock = 928
+set/ px_dock = 60
+set/ py_dock = 689
 
 window/ DOCK
     .title = "DOCK"
-    .px = "%px_dock%"
-    .py = "%py_dock%"
-    .sx = "1764"
-    .sy = "107"
-    .Opacity = "100"
-    .parametres = "TYPE:5 CTN:1 BORD:0 MOVE:0 SIZE:0 SHADOW:10 TASKBARHIDE:1 CLOSE:0 REDUCT:0 SIZEBTN:0"
-    .windowcolor = "255,255,255"
-    .titlecolor = "255,255,255"
-    .backcolor = "255,255,255"
+    .px = "0"
+    .py = "0"
+    .sx = "904"
+    .sy = "55"
+    .opacity = "100"
+    .parameters = "TYPE:5 CTN:1 BORDER:0 MOVE:0 SIZ:0 SHADOW:0 TASKBARHIDE:1 CLOSE:0 SIZBTN:0 CTX:1"
+    .WindowColor = "255,255,255"
+    .TitleColor = "255,255,255"
+    .BackColor = "255,255,255"
     .event = ""
     @#handle_dock create/
 end/ window
 
 picturebox/ DOCK_IMG
     .handle = "%handle_dock%"
-    .parametres = "IMGAUTO:1"
+    .name = "DOCK_IMG"
+    .parameters = "IMGAUTO:1"
     .px = "0"
     .py = "0"
-    .sx = "1764"
-    .sy = "107"
-    .image = "%HOST_OS%/APPS/SYSTEM/DOCK/MEDIA/Appbar.png"
+    .sx = "904"
+    .sy = "55"
+    .image = "%HOST_OS%/APPS/SYSTEM/APPBAR/MEDIA/Appbar.png"
     create/
 end/ picturebox
 
 picturebox/ MENU_BUTTON
     .handle = "%handle_dock%"
-    .parametres = "IMGAUTO:1 CTX:2"
-    .px = "39"
-    .py = "24"
-    .sx = "54"
-    .sy = "60"
-    .image = "%HOST_OS%/APPS/SYSTEM/DOCK/MEDIA/Button.png"
+    .parameters = "IMGAUTO:1 CTX:2"
+    .px = "20"
+    .py = "12"
+    .sx = "28"
+    .sy = "30"
+    .image = "%HOST_OS%/APPS/SYSTEM/APPBAR/MEDIA/Button.png"
     .event = "%_exe_path_%"
     create/
 end/ picturebox

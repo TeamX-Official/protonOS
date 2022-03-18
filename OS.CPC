@@ -30,7 +30,8 @@ set/ OS_Updated = 14-03-2022
 // ***************************************************
 
 set/ HOST_OS = OS/PROTON
-
+FIX/ GUI_OS = %HOST_OS%/MEDIA/GUI
+SET/ SCR_SAVE = %CPC_TEMP%\SCR
 
 // ******************************************************
 // ** [EN] Starting Graphic User Interface             **
@@ -40,8 +41,7 @@ exe/ & %HOST_OS%/SYSTEM/CONFIG/ENV_GUI/env_gui.cpc
 
 // Don't replace that one
 set/ SCR_IMG = OS/MEDIA/abs_blue.jpg
-// set/ SCR_RES = 1920x1080
-set/ SCR_BIT = 24
+set/ SCR_BIT = 32
 
 sys/ /os:PROTON
 
@@ -51,12 +51,14 @@ sys/ /fileformat-gui-update
 cls/
 txt/ Please wait, starting protonOS %OS_Dev_State% %OS_Ver_Maj%.%OS_Ver_Min%...
 ccp/ /pause:2500
+gui/
+
 /F: bootSequence()
 
 // Boot Sequence (Thank you Hexac System)
 
 function/ bootSequence()
-    ccp/ /set.level = 1
+    // ccp/ /set.level = 1
     @#BOOT_GET_INFORMATION_SETUP open/ %HOST_OS%/SYSTEM/SETUP/config.cfg
 
     // Get the content of the config.cfg file and execute when true or false.
@@ -75,6 +77,8 @@ function/ bootSequence()
         gui/
         exe/ & %HOST_OS%/SYSTEM/SETUP/APP/startscr.cpc
     end/ if
+
+    refresh/ /all
 end/ function
 
 
