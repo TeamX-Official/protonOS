@@ -1,0 +1,56 @@
+window/ protonCMD
+    .title = "protonCMD (CpcdosC+ CMD Shell)"
+    .parameters = "TYPE:0 ALPHAMODE:0 BLURRY:4 CTX:2"
+    .BackColor = "%WINDOW_COLOR%"
+    .sx = "600"
+    .sy = "400"
+    .px = "200"
+    .py = "200"
+    .events = "%_EXE_PATH_%"
+    @#PCMD create/
+end/ window
+
+ccp/ /set.level = 3
+
+set/ protonCMD.ctx_text(0) = About protonCMD
+// set/ protonCMD.ctx_action(0) = exe/ & %HOST_OS%/SYSIV/PROG_X86/console/about.CPC
+set/ protonCMD.ctx_action(0) = msgbox/ Not yet implemented
+	
+set/ protonCMD.ctx_text(1) = Exit
+set/ protonCMD.ctx_action(1) = close/ protonCMD
+	
+set/ protonCMD.ctx_number = 2
+	
+ccp/ /set.level = 2
+
+textbox/ HEHEHEHA
+    .handle = "%PCMD%"
+    .parameters = "EDIT:1 COL:1 MULTILIGNE:1 CONSOLE:1"
+    .px = "0"
+    .py = "0"
+    .sx = "600"
+    .sy = "400"
+    .BackColor = "005,005,005"
+    .TextColor = "029,100,200"
+    .text = ""
+    create/
+end/ textbox
+
+function/ protonCMD.Resize(up)
+	ccp/ /set.level = 2
+	// [FR] Recuperer la taile X et Y de la fenetre
+	// [EN] Getting X, Y window size
+	window/ /modif:protonCMD
+        @#Size_X .sx
+        @#Size_Y .sy
+	end/ window
+	
+	// [FR] Et y modifier dans le textbox
+	// [EN] And modify on textbox
+	textbox/ /modif:HEHEHEHA
+        .sx = "%Size_X%"
+        .sy = "%Size_Y%"
+        .TextColor = "255,029,000"
+        create/
+	end/ textbox
+end/ function

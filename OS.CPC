@@ -38,8 +38,9 @@ set/ OS_Updated = 14-03-2022
 // ***************************************************
 
 set/ HOST_OS = OS/PROTON
-FIX/ GUI_OS = %HOST_OS%/MEDIA/GUI
-SET/ SCR_SAVE = %CPC_TEMP%\SCR
+set/ GUI_OS = %HOST_OS%/MEDIA/GUI
+set/ SCR_SAVE = %CPC_TEMP%\SCR
+set/ WINDOW_COLOR = 025,025,025
 
 // ******************************************************
 // ** [EN] Starting Graphic User Interface             **
