@@ -1,4 +1,12 @@
 // This file is the index file for the kernel. Don't delete or rename this or else your system won't work properly.
+exe/ & OS/PROTON/SYSTEM/CONFIG/ENV_GUI/env_gui.cpc
+
+// Don't replace that one
+set/ SCR_IMG = OS/MEDIA/abs_blue.jpg
+set/ SCR_BIT = 32
+
+sys/ /os:PROTON
+
 declare/ bootSequence() : level(4)
 
 ccp/ /lang = EN
@@ -37,21 +45,12 @@ SET/ SCR_SAVE = %CPC_TEMP%\SCR
 // ** [EN] Starting Graphic User Interface             **
 // ** [FR] Demarrer l'interface utilisateur graphique  **
 // ******************************************************
-exe/ & %HOST_OS%/SYSTEM/CONFIG/ENV_GUI/env_gui.cpc
-
-// Don't replace that one
-set/ SCR_IMG = OS/MEDIA/abs_blue.jpg
-set/ SCR_BIT = 32
-
-sys/ /os:PROTON
-
 sys/ /fileformat-update %HOST_OS%/SYSTEM/CONFIG/FORMATS.INI
 sys/ /fileformat-gui-update
 
 cls/
 txt/ Please wait, starting protonOS %OS_Dev_State% %OS_Ver_Maj%.%OS_Ver_Min%...
 ccp/ /pause:2500
-gui/
 
 /F: bootSequence()
 
@@ -63,10 +62,10 @@ function/ bootSequence()
 
     // Get the content of the config.cfg file and execute when true or false.
     if/ "%BOOT_GET_INFORMATION_SETUP%" == "true" then:
-        @#SCREEN_RESOLUTION ouvrir/ %HOST_OS%/SYSTEM/CONFIG/SCR_RES/config.cfg
+        @#SCREEN_RESOLUTION open/ %HOST_OS%/SYSTEM/CONFIG/SCR_RES/config.cfg
         set/ SCR_RES = %SCREEN_RESOLUTION%
         set/ SCR_IMG_MODE = 2
-        // @#FOND ouvrir/ OS/HEXAC/SYSTEM/CONFIG/BACKGRD/config.cfg
+        // @#FOND open/ OS/HEXAC/SYSTEM/CONFIG/BACKGRD/config.cfg
         // set/ SCR_IMG = %FOND%
         gui/
         // exe/ & OS/HEXAC/SYS_APPS/LOGIN/login.cpc

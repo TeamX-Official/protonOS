@@ -3,8 +3,8 @@ set/ py_dock = 689
 
 window/ DOCK
     .title = "DOCK"
-    .px = "0"
-    .py = "0"
+    .px = "%px_dock%"
+    .py = "%py_dock%"
     .sx = "904"
     .sy = "55"
     .opacity = "100"
