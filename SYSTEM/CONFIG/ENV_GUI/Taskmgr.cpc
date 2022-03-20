@@ -30,7 +30,7 @@ function/ __display_taskmgr()
         // ===== Build window =====
         Window/ taskmgr_win
 
-                .title          = "CPinti Core Task manager"
+                .title          = "Task Manager"
                 .parameters     = "TYPE:0 SIZ:1 SIZBTN:1"
                 .px             = "140"
                 .py             = "100"
@@ -40,7 +40,7 @@ function/ __display_taskmgr()
                 .WindowColor    = "100,100,100"
                 .TitleColor     = "200,200,200"
                 .backcolor      = "100,100,100"
-                .icon           = "OS/MEDIA/GUI/taskm.png"
+                .icon           = "OS/PROTON/MEDIA/GUI/taskm.png"
                 .events         = "%_exe_path_%"
 
                 @#window_handle create/
