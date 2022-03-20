@@ -1,5 +1,5 @@
 set/ px_dock = 60
-set/ py_dock = 689
+set/ py_dock = 683
 
 window/ DOCK
     .title = "DOCK"
