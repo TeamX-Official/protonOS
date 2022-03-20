@@ -1,9 +1,11 @@
 // This file is the index file for the kernel. Don't delete or rename this or else your system won't work properly.
 exe/ & OS/PROTON/SYSTEM/CONFIG/ENV_GUI/env_gui.cpc
 
+set/ SCR_BIT = 32
+set/ SCR_RES = 1024x768
+
 // Don't replace that one
 set/ SCR_IMG = OS/MEDIA/abs_blue.jpg
-set/ SCR_BIT = 32
 
 sys/ /os:PROTON
 
@@ -41,6 +43,7 @@ set/ HOST_OS = OS/PROTON
 set/ GUI_OS = %HOST_OS%/MEDIA/GUI
 set/ SCR_SAVE = %CPC_TEMP%\SCR
 set/ WINDOW_COLOR = 025,025,025
+set/ TITLE_COLOR = 255,255,255
 
 // ******************************************************
 // ** [EN] Starting Graphic User Interface             **
@@ -53,7 +56,10 @@ cls/
 txt/ Please wait, starting protonOS %OS_Dev_State% %OS_Ver_Maj%.%OS_Ver_Min%...
 ccp/ /pause:2500
 
-/F: bootSequence()
+gui/
+exe/ & %HOST_OS%/APPS/SYSTEM/APPBAR/APPBAR.CPC
+
+// /F: bootSequence()
 
 // Boot Sequence (Thank you Hexac System)
 
@@ -63,8 +69,8 @@ function/ bootSequence()
 
     // Get the content of the config.cfg file and execute when true or false.
     if/ "%BOOT_GET_INFORMATION_SETUP%" == "true" then:
-        @#SCREEN_RESOLUTION open/ %HOST_OS%/SYSTEM/CONFIG/SCR_RES/config.cfg
-        set/ SCR_RES = %SCREEN_RESOLUTION%
+        // @#SCREEN_RESOLUTION open/ %HOST_OS%/SYSTEM/CONFIG/SCR_RES/config.cfg
+        // set/ SCR_RES = %SCREEN_RESOLUTION%
         set/ SCR_IMG_MODE = 2
         // @#FOND open/ OS/HEXAC/SYSTEM/CONFIG/BACKGRD/config.cfg
         // set/ SCR_IMG = %FOND%

@@ -8,7 +8,7 @@ window/ DOCK
     .sx = "904"
     .sy = "55"
     .opacity = "100"
-    .parameters = "TYPE:5 CTN:1 BORDER:0 MOVE:0 SIZ:0 SHADOW:0 TASKBARHIDE:1 CLOSE:0 SIZBTN:0 CTX:1"
+    .parameters = "TYPE:5 CTN:1 BORDER:0 MOVE:0 SIZ:0 SHADOW:0 TASKBARHIDE:1 CLOSE:0 SIZBTN:0 CTX:2"
     .WindowColor = "%WINDOW_COLOR%"
     .TitleColor = "%WINDOW_COLOR%"
     .BackColor = "%WINDOW_COLOR%"

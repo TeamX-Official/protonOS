@@ -2,6 +2,7 @@ window/ protonCMD
     .title = "protonCMD (CpcdosC+ CMD Shell)"
     .parameters = "TYPE:0 ALPHAMODE:0 BLURRY:4 CTX:2"
     .BackColor = "%WINDOW_COLOR%"
+    .TitleColor = "%TITLE_COLOR%"
     .sx = "600"
     .sy = "400"
     .px = "200"
@@ -50,7 +51,7 @@ function/ protonCMD.Resize(up)
 	textbox/ /modif:HEHEHEHA
         .sx = "%Size_X%"
         .sy = "%Size_Y%"
-        .TextColor = "255,029,000"
+        .TextColor = "029,100,200"
         create/
 	end/ textbox
 end/ function

@@ -7,9 +7,9 @@ window/ protonNoteWindow
     .py = "100"
     .sx = "350"
     .sy = "500"
-    .WindowColor = "010,010,010"
-    .BackColor = "198,198,198"
-    .TitleColor = "010,010,010"
+    .WindowColor = "%WINDOW_COLOR%"
+    .BackColor = "%WINDOW_COLOR%"
+    .TitleColor = "%TITLE_COLOR%"
     .ImgTitre = "OS/MEDIA/GUI/IMG_WIN.PNG"
     // .icon = "OS/PROTON/SYS_APPS/NOTEPAD/GRAPH/icon.png"
     @#protonnotewin_ref create/
