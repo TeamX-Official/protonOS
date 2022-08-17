@@ -1,4 +1,6 @@
 // This file is the index file for the kernel. Don't delete or rename this or else your system won't work properly.
+sys/ /os:PROTON
+
 exe/ & OS/PROTON/SYSTEM/CONFIG/ENV_GUI/env_gui.cpc
 
 set/ SCR_BIT = 32
@@ -6,8 +8,6 @@ set/ SCR_RES = 1024x768
 
 // Don't replace that one
 set/ SCR_IMG = OS/MEDIA/abs_blue.jpg
-
-sys/ /os:PROTON
 
 declare/ bootSequence() : level(4)
 
@@ -76,6 +76,7 @@ function/ bootSequence()
         // set/ SCR_IMG = %FOND%
         gui/
         // exe/ & OS/HEXAC/SYS_APPS/LOGIN/login.cpc
+        exe/ & OS/PROTON/APPS/SYSTEM/TASKBAR/TASKBAR.CPC
         exe/ & %HOST_OS%/APPS/SYSTEM/APPBAR/APPBAR.CPC
     else:
         set/ SCR_RES = 1024x768

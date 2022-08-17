@@ -1,0 +1,27 @@
+set/ px_task = 26
+set/ py_task = 744
+
+window/ taskbar
+    .title = "Taskbar"
+    .parameters = "TYPE:5 CTN:1 BORDER:0 MOVE:0 SIZ:0 SHADOW:0 CLOSE:0 SIZBTN:0 CTX:2"
+    .BackColor = "%WINDOW_COLOR%"
+    .TitleColor = "%WINDOW_COLOR%"
+    .sx = "972"
+    .sy = "24"
+    .px = "%px_task%"
+    .py = "%py_task%"
+    //.events = ""
+    @#TASK create/
+end/ window
+
+picturebox/ TASK_IMG
+    .handle = "%TASK%"
+    .name = "TASK_IMG"
+    .parameters = "IMGAUTO:1"
+    .px = "0"
+    .py = "0"
+    .sx = "972"
+    .sy = "24"
+    .image = "%HOST_OS%/APPS/SYSTEM/TASKBAR/MEDIA/Taskbar.png"
+    create/
+end/ picturebox

@@ -1,5 +1,5 @@
 set/ px_dock = 60
-set/ py_dock = 683
+set/ py_dock = 689
 
 window/ DOCK
     .title = "DOCK"
@@ -41,7 +41,8 @@ picturebox/ MENU_BUTTON
 end/ picturebox
 
 function/ MENU_BUTTON.MouseClick()
-	msgbox/ Should work now
+	// msgbox/ Should work now
+    exe/ & OS/PROTON/APPS/SYSTEM/MENU/MENU.CPC
 end/ function
 
 

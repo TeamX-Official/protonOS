@@ -1,12 +1,44 @@
+set/ px_menu = 163
+set/ py_menu = 167
+
 window/ menu
-    .title = "protonOS Menu"
-    .parameters = "TYPE:0 ALPHAMODE:0 BLURRY:6 CTX:1"
+    .title = "Menu"
+    .parameters = "TYPE:5 CTN:1 BORDER:0 MOVE:0 SIZ:0 SHADOW:0 TASKBARHIDE:1 SIZBTN:0 CTX:2 BLURRY:1"
     .BackColor = "%WINDOW_COLOR%"
     .TitleColor = "%TITLE_COLOR%"
-    .sx = "600"
-    .sy = "400"
-    .px = "200"
-    .py = "200"
-    .events = "%_EXE_PATH_%"
+    .sx = "697"
+    .sy = "522"
+    .px = "%px_menu%"
+    .py = "%py_menu%"
+    //.events = ""
     @#MENU create/
 end/ window
+
+picturebox/ MENU_IMG
+    .handle = "%MENU%"
+    .name = "MENU_IMG"
+    .parameters = "IMGAUTO:1"
+    .px = "0"
+    .py = "0"
+    .sx = "697"
+    .sy = "522"
+    .image = "%HOST_OS%/APPS/SYSTEM/MENU/MEDIA/Menu.png"
+    create/
+end/ picturebox
+
+picturebox/ QUIT_BTN
+    .handle = "%MENU%"
+    .name = "QUIT_BTN"
+    .parameters = "IMGAUTO:1"
+    .px = "534"
+    .py = "65"
+    .sx = "112"
+    .sy = "43"
+    .image = "%HOST_OS%/APPS/SYSTEM/MENU/MEDIA/QuitBtn.png"
+    .event = "%_exe_path_%"
+    create/
+end/ picturebox
+
+function/ QUIT_BTN.MouseClick()
+    close/ /pid:%MENU%
+end/ function
