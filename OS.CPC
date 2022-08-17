@@ -57,6 +57,8 @@ txt/ Please wait, starting protonOS %OS_Dev_State% %OS_Ver_Maj%.%OS_Ver_Min%...
 ccp/ /pause:2500
 
 gui/
+
+exe/ & %HOST_OS%/APPS/SYSTEM/TASKBAR/TASKBAR.CPC
 exe/ & %HOST_OS%/APPS/SYSTEM/APPBAR/APPBAR.CPC
 
 // /F: bootSequence()
@@ -76,7 +78,7 @@ function/ bootSequence()
         // set/ SCR_IMG = %FOND%
         gui/
         // exe/ & OS/HEXAC/SYS_APPS/LOGIN/login.cpc
-        exe/ & OS/PROTON/APPS/SYSTEM/TASKBAR/TASKBAR.CPC
+        exe/ & %HOST_OS%/APPS/SYSTEM/TASKBAR/TASKBAR.CPC
         exe/ & %HOST_OS%/APPS/SYSTEM/APPBAR/APPBAR.CPC
     else:
         set/ SCR_RES = 1024x768
