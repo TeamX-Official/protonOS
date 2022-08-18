@@ -9,65 +9,65 @@ CCP/ /SET.LEVEL = 3
 
 // [FR] Configuration GUi
 // [EN] GUI configuration
-EXE/ & %CPC.REP.KRNL%/CONFIG/ENV_GUI/gui_std.cpc
+EXE/ & OS/PROTON/SYSTEM/CONFIG/ENV_GUI/gui_std.cpc
 
 // [FR] Configuration curseurs graphiques
 // [EN] Config graphic cursors
-EXE/ & %CPC.REP.KRNL%/CONFIG/ENV_GUI/cursor.cpc
+EXE/ & OS/PROTON/SYSTEM/CONFIG/ENV_GUI/cursor.cpc
 
 // [FR] Configuration des fenetres
 // [EN] Window configuration
-EXE/ & %CPC.REP.KRNL%/CONFIG/ENV_GUI/window.cpc
+EXE/ & OS/PROTON/SYSTEM/CONFIG/ENV_GUI/window.cpc
 
 
 // [FR] Configuration du bouton
 // [EN] Button configuration
-EXE/ & %CPC.REP.KRNL%/CONFIG/ENV_GUI/button.cpc
+EXE/ & OS/PROTON/SYSTEM/CONFIG/ENV_GUI/button.cpc
 
 // [FR] Configuration du picturebox
 // [EN] Picturebox configuration
-EXE/ & %CPC.REP.KRNL%/CONFIG/ENV_GUI/IMGBOX.cpc
+EXE/ & OS/PROTON/SYSTEM/CONFIG/ENV_GUI/IMGBOX.cpc
 
 // [FR] Configuration du textebox
 // [EN] Textbox configuration
-EXE/ & %CPC.REP.KRNL%/CONFIG/ENV_GUI/txtbox.cpc
+EXE/ & OS/PROTON/SYSTEM/CONFIG/ENV_GUI/txtbox.cpc
 
 // [FR] Configuration du checkbox
 // [EN] checkbox configuration
-EXE/ & %CPC.REP.KRNL%/CONFIG/ENV_GUI/checkbox.cpc
+EXE/ & OS/PROTON/SYSTEM/CONFIG/ENV_GUI/checkbox.cpc
 
 // [FR] Configuration de l'explorateur
 // [EN] Explorer configuration
-EXE/ & %CPC.REP.KRNL%/CONFIG/ENV_GUI/explorer.cpc
+EXE/ & OS/PROTON/SYSTEM/CONFIG/ENV_GUI/explorer.cpc
 
 // [FR] Configuration de la listbox
 // [EN] Listbox configuration
-EXE/ & %CPC.REP.KRNL%/CONFIG/ENV_GUI/listbox.cpc
+EXE/ & OS/PROTON/SYSTEM/CONFIG/ENV_GUI/listbox.cpc
 
 
 // [FR] Configuration du msgbox
 // [EN] Msgbox configuration
-EXE/ & %CPC.REP.KRNL%/CONFIG/ENV_GUI/msgbox.cpc
+EXE/ & OS/PROTON/SYSTEM/CONFIG/ENV_GUI/msgbox.cpc
 
 
 // [FR] Configuration du menu contextuel
 // [EN] Contextual configuration
-EXE/ & %CPC.REP.KRNL%/CONFIG/ENV_GUI/CONTEXT.cpc
+EXE/ & OS/PROTON/SYSTEM/CONFIG/ENV_GUI/CONTEXT.cpc
 
 
 // [FR] Configuration du desktop
 // [EN] Desktop configuration
-EXE/ & %CPC.REP.KRNL%/CONFIG/ENV_GUI/DESKTOP.cpc
+EXE/ & OS/PROTON/SYSTEM/CONFIG/ENV_GUI/DESKTOP.cpc
 
 
 // [FR] Configuration du TaskBar
 // [EN] TaskBar configuration
-EXE/ & %CPC.REP.KRNL%/CONFIG/ENV_GUI/TASKBAR.cpc
+EXE/ & OS/PROTON/SYSTEM/CONFIG/ENV_GUI/TASKBAR.cpc
 
 
 // [FR] Configuration du gestionnaire de taches
 // [EN] Task manager configuration
-EXE/ & %CPC.REP.KRNL%/CONFIG/ENV_GUI/taskmgr.cpc
+EXE/ & OS/PROTON/SYSTEM/CONFIG/ENV_GUI/taskmgr.cpc
 
 
 

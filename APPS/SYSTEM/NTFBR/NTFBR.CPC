@@ -1,0 +1,25 @@
+window/ BAR
+    .title = "BAR"
+    .parameters = "TYPE:5 CTN:1 BORDER:0 MOVE:0 SIZ:0 SHADOW:0 TASKBARHIDE:1"
+    .BackColor = "%WINDOW_COLOR%"
+    .TitleColor = "%TITLE_COLOR%"
+    .sx = "324"
+    .sy = "43"
+    .px = "0"
+    .py = "0"
+    //.events = ""
+    @#NOTIF create/
+end/ window
+
+// Images
+picturebox/ NOTIF_IMG
+    .handle = "%NOTIF%"
+    .name = "NOTIF_IMG"
+    .parameters = "IMGAUTO:1"
+    .px = "0"
+    .py = "0"
+    .sx = "324"
+    .sy = "43"
+    .image = "%HOST_OS%/APPS/SYSTEM/NTFBR/MEDIA/Bar.png"
+    create/
+end/ picturebox

@@ -27,7 +27,7 @@ set/ OS_Compagny = TeamX
 
 set/ OS_Ver_Maj = 1
 set/ OS_Ver_Min = 0
-set/ OS_Dev_State = Alpha
+set/ OS_Dev_State = Pre-Alpha
 
 set/ OS_Created = 20-06-2021
 set/ OS_Updated = 14-03-2022
@@ -40,6 +40,7 @@ set/ OS_Updated = 14-03-2022
 // ***************************************************
 
 set/ HOST_OS = OS/PROTON
+set/ SCR_IMG = %HOST_OS%/MEDIA/BG1.png
 set/ GUI_OS = %HOST_OS%/MEDIA/GUI
 set/ SCR_SAVE = %CPC_TEMP%\SCR
 set/ WINDOW_COLOR = 025,025,025
@@ -54,17 +55,20 @@ sys/ /fileformat-gui-update
 
 cls/
 txt/ Please wait, starting protonOS %OS_Dev_State% %OS_Ver_Maj%.%OS_Ver_Min%...
-ccp/ /pause:2500
+ccp/ /pause:1750
 
 gui/
 
 exe/ & %HOST_OS%/APPS/SYSTEM/TASKBAR/TASKBAR.CPC
 exe/ & %HOST_OS%/APPS/SYSTEM/APPBAR/APPBAR.CPC
+exe/ & %HOST_OS%/APPS/SYSTEM/NTFBR/NTFBR.CPC
+
+// temporary
+exe/ & %HOST_OS%/APPS/DEFAULT/PNOTE/pnote.cpc
 
 // /F: bootSequence()
 
 // Boot Sequence (Thank you Hexac System)
-
 function/ bootSequence()
     // ccp/ /set.level = 1
     @#BOOT_GET_INFORMATION_SETUP open/ %HOST_OS%/SYSTEM/SETUP/config.cfg
@@ -74,12 +78,15 @@ function/ bootSequence()
         // @#SCREEN_RESOLUTION open/ %HOST_OS%/SYSTEM/CONFIG/SCR_RES/config.cfg
         // set/ SCR_RES = %SCREEN_RESOLUTION%
         set/ SCR_IMG_MODE = 2
-        // @#FOND open/ OS/HEXAC/SYSTEM/CONFIG/BACKGRD/config.cfg
+        // @#FOND open/ %HOST_OS%/SYSTEM/CONFIG/BACKGRD/config.cfg
         // set/ SCR_IMG = %FOND%
+        set/ SCR_IMG = %HOST_OS%/MEDIA/BG1.png
         gui/
+        // TODO: Make login screen
         // exe/ & OS/HEXAC/SYS_APPS/LOGIN/login.cpc
         exe/ & %HOST_OS%/APPS/SYSTEM/TASKBAR/TASKBAR.CPC
         exe/ & %HOST_OS%/APPS/SYSTEM/APPBAR/APPBAR.CPC
+        exe/ & %HOST_OS%/APPS/SYSTEM/NTFBR/NTFBR.CPC
     else:
         set/ SCR_RES = 1024x768
         // set/ SCR_IMG = OS/HEXAC/SYSTEM/SETUP/BACKGRD/FSTSTP.png

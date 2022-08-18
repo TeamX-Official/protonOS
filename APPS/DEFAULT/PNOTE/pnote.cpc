@@ -1,0 +1,32 @@
+// protonNote
+set/ pos_x = /C(%CPC.SCR.X% / 2 - 650)
+set/ pos_y = /C(%CPC.SCR.Y% / 2 - 500)
+
+window/ protonNoteWindow
+    .title = "protonNote"
+    .parametres = "TYPE:0"
+    .px = "%pos_x%"
+    .py = "%pos_y%"
+    .sx = "650"
+    .sy = "500"
+    .WindowColor = "%WINDOW_COLOR%"
+    .BackColor = "%WINDOW_COLOR%"
+    .TitleColor = "%TITLE_COLOR%"
+    .ImgTitre = "OS/MEDIA/GUI/IMG_WIN.PNG"
+    // .icon = "OS/PROTON/SYS_APPS/NOTEPAD/GRAPH/icon.png"
+    @#protonnotewin_ref create/
+end/ window
+
+textbox/ textzone
+    .handle = "%protonnotewin_ref%"
+    .parametres = "EDIT:1 MULTILINES:1 IMGAUTO:1"
+    .px = "0"
+    .py = "0"
+    .sx = "350"
+    .sy = "500"
+    .BackColor = "025,025,025"
+    .TextColor = "255,255,255"
+    create/
+end/ textbox
+
+

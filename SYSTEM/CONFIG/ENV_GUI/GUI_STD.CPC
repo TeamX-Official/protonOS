@@ -36,11 +36,11 @@ SET/ SCR_IMG_MODE = 0
 
 // [FR] Couleur des textes en general
 // [EN] General color text
-set/ CPC_GUI.TEXT_RGB = 020,020,020
+FIX/ CPC_GUI.TEXT_RGB = 020,020,020
 
 // [FR] Couleur en general
 // [EN] General colors
-set/ CPC_GUI.RGB = 190,190,190
+FIX/ CPC_GUI.RGB = 190,190,190
 
 
 

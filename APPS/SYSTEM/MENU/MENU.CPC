@@ -3,7 +3,7 @@ set/ py_menu = 167
 
 window/ menu
     .title = "Menu"
-    .parameters = "TYPE:5 CTN:1 BORDER:0 MOVE:0 SIZ:0 SHADOW:0 TASKBARHIDE:1 SIZBTN:0 CTX:2 BLURRY:1"
+    .parameters = "TYPE:5 CTN:1 BORDER:0 MOVE:0 SIZ:0 SHADOW:0 TASKBAR:1 TASKBARHIDE:1 SIZBTN:0 CTX:2 BLURRY:1 PRIORITY:1"
     .BackColor = "%WINDOW_COLOR%"
     .TitleColor = "%TITLE_COLOR%"
     .sx = "697"
@@ -14,6 +14,7 @@ window/ menu
     @#MENU create/
 end/ window
 
+// Images
 picturebox/ MENU_IMG
     .handle = "%MENU%"
     .name = "MENU_IMG"
@@ -34,11 +35,91 @@ picturebox/ QUIT_BTN
     .py = "65"
     .sx = "112"
     .sy = "43"
-    .image = "%HOST_OS%/APPS/SYSTEM/MENU/MEDIA/QuitBtn.png"
+    .image = "%HOST_OS%/APPS/SYSTEM/MENU/MEDIA/BUTTONS/QuitBtn.png"
     .event = "%_exe_path_%"
     create/
 end/ picturebox
 
+// Buttons
+picturebox/ BTN1
+    .handle = "%MENU%"
+    .name = "BTN1"
+    .parameters = "IMGAUTO:1"
+    .px = "59"
+    .py = "190"
+    .sx = "157"
+    .sy = "133"
+    .image = "%HOST_OS%/APPS/SYSTEM/MENU/MEDIA/BUTTONS/Button.png"
+    .event = "%_exe_path_%"
+    create/
+end/ picturebox
+
+picturebox/ BTN2
+    .handle = "%MENU%"
+    .name = "BTN2"
+    .parameters = "IMGAUTO:1"
+    .px = "270"
+    .py = "190"
+    .sx = "157"
+    .sy = "133"
+    .image = "%HOST_OS%/APPS/SYSTEM/MENU/MEDIA/BUTTONS/Button.png"
+    .event = "%_exe_path_%"
+    create/
+end/ picturebox
+
+picturebox/ BTN3
+    .handle = "%MENU%"
+    .name = "BTN3"
+    .parameters = "IMGAUTO:1"
+    .px = "481"
+    .py = "190"
+    .sx = "157"
+    .sy = "133"
+    .image = "%HOST_OS%/APPS/SYSTEM/MENU/MEDIA/BUTTONS/Button.png"
+    .event = "%_exe_path_%"
+    create/
+end/ picturebox
+
+picturebox/ BTN4
+    .handle = "%MENU%"
+    .name = "BTN4"
+    .parameters = "IMGAUTO:1"
+    .px = "59"
+    .py = "353"
+    .sx = "157"
+    .sy = "133"
+    .image = "%HOST_OS%/APPS/SYSTEM/MENU/MEDIA/BUTTONS/Button.png"
+    .event = "%_exe_path_%"
+    create/
+end/ picturebox
+
+picturebox/ BTN5
+    .handle = "%MENU%"
+    .name = "BTN5"
+    .parameters = "IMGAUTO:1"
+    .px = "270"
+    .py = "353"
+    .sx = "157"
+    .sy = "133"
+    .image = "%HOST_OS%/APPS/SYSTEM/MENU/MEDIA/BUTTONS/Button.png"
+    .event = "%_exe_path_%"
+    create/
+end/ picturebox
+
+picturebox/ BTN6
+    .handle = "%MENU%"
+    .name = "BTN6"
+    .parameters = "IMGAUTO:1"
+    .px = "481"
+    .py = "353"
+    .sx = "157"
+    .sy = "133"
+    .image = "%HOST_OS%/APPS/SYSTEM/MENU/MEDIA/BUTTONS/Button.png"
+    .event = "%_exe_path_%"
+    create/
+end/ picturebox
+
+// Events
 function/ QUIT_BTN.MouseClick()
-    close/ /pid:%MENU%
+    close/ menu
 end/ function
