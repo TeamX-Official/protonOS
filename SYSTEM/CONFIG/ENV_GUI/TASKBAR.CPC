@@ -42,7 +42,7 @@ SET/ CPC_GUI.TASKBAR.SIZ_ITEM_Y = 24
 // [FR] Positionnement du texte dans l'item
 // [EN] Text position on item
 SET/ CPC_GUI.TASKBAR.POS_TEXT_X = 32
-SET/ CPC_GUI.TASKBAR.POS_TEXT_Y = 4
+SET/ CPC_GUI.TASKBAR.POS_TEXT_Y = 8
 
 // [FR] Positionnement du texte dans l'item
 // [EN] Text position on item

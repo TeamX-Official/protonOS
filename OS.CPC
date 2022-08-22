@@ -59,12 +59,13 @@ ccp/ /pause:1750
 
 gui/
 
+exe/ & %HOST_OS%/APPS/SYSTEM/NTFBR/NTFBR.CPC
 exe/ & %HOST_OS%/APPS/SYSTEM/TASKBAR/TASKBAR.CPC
 exe/ & %HOST_OS%/APPS/SYSTEM/APPBAR/APPBAR.CPC
-exe/ & %HOST_OS%/APPS/SYSTEM/NTFBR/NTFBR.CPC
 
 // temporary
 exe/ & %HOST_OS%/APPS/DEFAULT/PNOTE/pnote.cpc
+refresh/ /all
 
 // /F: bootSequence()
 

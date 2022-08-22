@@ -32,11 +32,11 @@ set/ CPC_GUI.window.fullscreen_right = 0
 
 // [FR] Bord haut du plein ecran
 // [EN] Top full screen of window
-set/ CPC_GUI.window.fullscreen_top = 20
+set/ CPC_GUI.window.fullscreen_top = 0
 
 // [FR] Bord bas du plein ecran
 // [EN] Down full screen of window
-set/ CPC_GUI.window.fullscreen_down = 0
+set/ CPC_GUI.window.fullscreen_down = 79
 
 
 

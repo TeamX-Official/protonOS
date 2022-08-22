@@ -48,7 +48,7 @@ CCP/ /SET.LEVEL = 4
 
 // [FR] Rebord arrondi haut/gauche
 // [EN] Rounded top/left
-set/ design_Image[0] = OS\MEDIA\GUI\WINDOW\WIN_TL.PNG
+set/ design_Image[0] = OS\PROTON\MEDIA\GUI\WINDOW\WIN_TL.PNG
 set/ design_Image_pos_relative[0] = 0
 set/ design_Image_px[0] = 0
 set/ design_Image_py[0] = 0
@@ -59,7 +59,7 @@ set/ design_Image_alpha[0] = 255
 
 // [FR] Rebord arrondi haut/droit
 // [EN] Rounded top/right
-set/ design_Image[1] = OS\MEDIA\GUI\WINDOW\WIN_TR.PNG
+set/ design_Image[1] = OS\PROTON\MEDIA\GUI\WINDOW\WIN_TR.PNG
 set/ design_Image_pos_relative[1] = 1
 set/ design_Image_px[1] = 0
 set/ design_Image_py[1] = 0
@@ -70,7 +70,7 @@ set/ design_Image_alpha[1] = 255
 
 // [FR] Barre haut central
 // [EN] Middle top bar
-set/ design_Image[2] = OS\MEDIA\GUI\WINDOW\WIN_TM.PNG
+set/ design_Image[2] = OS\PROTON\MEDIA\GUI\WINDOW\WIN_TM.PNG
 set/ design_Image_pos_relative[2] = 1
 set/ design_Image_px[2] = 7
 set/ design_Image_py[2] = 0
@@ -81,7 +81,7 @@ set/ design_Image_alpha[2] = 255
 
 // [FR] Barre titre centrale
 // [EN] Central title bar
-set/ design_Image[3] = OS\MEDIA\GUI\WINDOW\WIN_TITL.PNG
+set/ design_Image[3] = OS\PROTON\MEDIA\GUI\WINDOW\WIN_TITL.PNG
 set/ design_Image_pos_relative[3] = 1
 set/ design_Image_px[3] = 0
 set/ design_Image_py[3] = 7

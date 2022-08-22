@@ -9,7 +9,7 @@ FIX/ CPC_GUI.WINDOW.ICO = %OS_GUI%/ICO_DEF.PNG
 
 // [FR] Position X,Y de l'icone de la fenetre
 // [EN] Windows title X,Y position
-FIX/ CPC_GUI.WINDOW.ICO_PX = 8
+FIX/ CPC_GUI.WINDOW.ICO_PX = -8
 FIX/ CPC_GUI.WINDOW.ICO_PY = 5
 
 // [FR] Taille X,Y de l'icone de la fenetre 16x16p
@@ -20,9 +20,7 @@ FIX/ CPC_GUI.WINDOW.ICO_SY = 20
 
 // [FR] Position relative (Gauche:1, centre:2, droit:3)
 // [EN] Relative position (Left:1, center:2, right:3)
-FIX/ CPC_GUI.WINDOW.ICO_POSITION = 1
-
-
+FIX/ CPC_GUI.WINDOW.ICO_POSITION = 3
 
 // --- APPLICATION CLOSING ---
 
@@ -32,8 +30,8 @@ FIX/ CPC_GUI.WINDOW.BT_CLOSE = %OS_GUI%/WINDOW/B_CLOSE.png
 
 // [FR] Position X,Y de l'icone de la fenetre
 // [EN] Windows title X,Y position
-FIX/ CPC_GUI.WINDOW.BT_CLOSE_PX = 6
-FIX/ CPC_GUI.WINDOW.BT_CLOSE_PY = 4
+FIX/ CPC_GUI.WINDOW.BT_CLOSE_PX = 8
+FIX/ CPC_GUI.WINDOW.BT_CLOSE_PY = 8
 
 // [FR] Taille X,Y de l'icone de la fenetre 16x16p
 // [EN] Windows title X,Y Size 16x16p
@@ -43,7 +41,7 @@ FIX/ CPC_GUI.WINDOW.BT_CLOSE_SY = 20
 
 // [FR] Position relative (Gauche:1, centre:2, droit:3)
 // [EN] Relative position (Left:1, center:2, right:3)
-FIX/ CPC_GUI.WINDOW.BT_CLOSE_POSITION = 3
+FIX/ CPC_GUI.WINDOW.BT_CLOSE_POSITION = 1
 
 
 // --- APPLICATION SIZE+  ---
@@ -54,8 +52,8 @@ FIX/ CPC_GUI.WINDOW.BT_SIZEUP = %OS_GUI%/WINDOW/B_SIZEUP.png
 
 // [FR] Position X,Y de l'icone de la fenetre
 // [EN] Windows title X,Y position
-FIX/ CPC_GUI.WINDOW.BT_SIZEUP_PX = 36
-FIX/ CPC_GUI.WINDOW.BT_SIZEUP_PY = 4
+FIX/ CPC_GUI.WINDOW.BT_SIZEUP_PX = 16
+FIX/ CPC_GUI.WINDOW.BT_SIZEUP_PY = 8
 
 // [FR] Taille X,Y de l'icone de la fenetre 16x16p
 // [EN] Windows title X,Y Size 16x16p
@@ -65,7 +63,7 @@ FIX/ CPC_GUI.WINDOW.BT_SIZEUP_SY = 20
 
 // [FR] Position relative (Gauche:1, centre:2, droit:3)
 // [EN] Relative position (Left:1, center:2, right:3)
-FIX/ CPC_GUI.WINDOW.BT_SIZEUP_POSITION = 3
+FIX/ CPC_GUI.WINDOW.BT_SIZEUP_POSITION = 1
 
 
 
@@ -77,8 +75,8 @@ FIX/ CPC_GUI.WINDOW.BT_SIZEDOWN = %OS_GUI%/WINDOW/B_SIZEDW.png
 
 // [FR] Position X,Y de l'icone de la fenetre
 // [EN] Windows title X,Y position
-FIX/ CPC_GUI.WINDOW.BT_SIZEDOWN_PX = 36
-FIX/ CPC_GUI.WINDOW.BT_SIZEDOWN_PY = 4
+FIX/ CPC_GUI.WINDOW.BT_SIZEDOWN_PX = 16
+FIX/ CPC_GUI.WINDOW.BT_SIZEDOWN_PY = 8
 
 // [FR] Taille X,Y de l'icone de la fenetre 16x16p
 // [EN] Windows title X,Y Size 16x16p
@@ -88,9 +86,7 @@ FIX/ CPC_GUI.WINDOW.BT_SIZEDOWN_SY = 20
 
 // [FR] Position relative (Gauche:1, centre:2, droit:3)
 // [EN] Relative position (Left:1, center:2, right:3)
-FIX/ CPC_GUI.WINDOW.BT_SIZEDOWN_POSITION = 3
-
-
+FIX/ CPC_GUI.WINDOW.BT_SIZEDOWN_POSITION = 1
 
 // --- APPLICATION REDUCTION ---
 
@@ -100,8 +96,8 @@ FIX/ CPC_GUI.WINDOW.BT_REDUCT = %OS_GUI%/WINDOW/B_DOWN.png
 
 // [FR] Position X,Y de l'icone de la fenetre
 // [EN] Windows title X,Y position
-FIX/ CPC_GUI.WINDOW.BT_REDUCT_PX = 66
-FIX/ CPC_GUI.WINDOW.BT_REDUCT_PY = 4
+FIX/ CPC_GUI.WINDOW.BT_REDUCT_PX = 24
+FIX/ CPC_GUI.WINDOW.BT_REDUCT_PY = 8
 
 // [FR] Taille X,Y de l'icone de la fenetre 16x16p
 // [EN] Windows title X,Y Size 16x16p
@@ -111,7 +107,8 @@ FIX/ CPC_GUI.WINDOW.BT_REDUCT_SY = 20
 
 // [FR] Position relative (Gauche:1, centre:2, droit:3 --> Nombre negatif)
 // [EN] Relative position (Left:1, center:2, right:3 --> Negative number)
-FIX/ CPC_GUI.WINDOW.BT_REDUCT_POSITION = 3
+FIX/ CPC_GUI.WINDOW.BT_REDUCT_POSITION = 1
+
 
 
 
